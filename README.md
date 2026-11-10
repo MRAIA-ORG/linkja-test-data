@@ -2,7 +2,7 @@
 
 ## Warning
 
-The secret files in `crypto/secret` hold a known test secret. It is published in this repository, so anyone can read it. It protects nothing. Anyone with these files can unlock the hash values in any hash file made with them, and can test guesses of patient details against them, because the library secret, the salts and the aggregator private key are all public.
+The secret files in `crypto/secret` hold a known test secret. It is published in this repository, so anyone can read it. It protects nothing. Anyone with these files can unlock the hash values in any hash file made with them and the sample public key, and can test guesses of patient details against those hash values, because the library secret, the salts and the aggregator private key are all public.
 
 * `crypto/secret/linkja_secret.h` holds the library secret in plain text.
 * `crypto/secret/liblinkjacrypto.dylib` (macOS) and `crypto/secret/linkjacrypto.dll` (Windows) are secret builds of the crypto library made with that test secret.
