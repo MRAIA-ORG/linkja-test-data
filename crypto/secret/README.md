@@ -1,6 +1,6 @@
 # Warning: test secret only
 
-The files in this folder hold a known test secret. It is published in this repository, so anyone can read it. It protects nothing. Anyone with these files can unlock the hash values in any hash file made with them and the sample public key, and can test guesses of patient details against those hash values, because the library secret, the salts and the aggregator private key are all public.
+The files in this folder hold a known test secret. It is published in this repository, so anyone can read it. It protects nothing. The library secret, the sample salts and the aggregator private key are all public. So anyone can unlock the hash values in a hash file made with these files and the sample public key. With the sample salt file too, anyone can test guesses of patient details against those hash values.
 
 * `linkja_secret.h` holds the library secret in plain text.
 * `liblinkjacrypto.dylib` (macOS) and `linkjacrypto.dll` (Windows) are secret builds of the crypto library made with that test secret.
