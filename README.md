@@ -1,4 +1,16 @@
 # linkja-test-data
+
+## Warning
+
+The secret files in `crypto/secret` hold a known test secret. It is published in this repository, so anyone can read it. It protects nothing.
+
+* `crypto/secret/linkja_secret.h` holds the library secret in plain text.
+* `crypto/secret/liblinkjacrypto.dylib` (macOS) and `crypto/secret/linkjacrypto.dll` (Windows) are secret builds of the crypto library made with that test secret.
+
+The sample salt file (`hashing/salt.txt`) and the aggregator private key (`matching/private-agg.key`) are published test secrets too.
+
+Never use these files for a real project. A real project compiles its own secret build. See the [linkja-crypto README](https://github.com/MRAIA-ORG/linkja-crypto) for the steps.
+
 Test data to be used when trying out Linkja software
 
 * crypto - contains copies of the linkja-crypto library for Windows or macOS.  Two versions exist:
